@@ -1,0 +1,41 @@
+GIT:
+-Terminal
+-Promt de comando
+-CMD
+-Power Shell
+
+Instalar Git Bash
+comandos:
+cd para navegar em pastas
+ls listar pastas
+ls -la listar pastas e ocultas
+pwd nostra o caminho atual de onde estou
+mkdir_nomedapasta para criar pasta
+touch_nome do arquivo cria um arquivo
+rm nomedoarquvivo para apagar o arquivo (extensão sempre acompanha o arquivo)
+rm -rf nomedoarquivo para apagar a pasta, para apagar a pasta precisa sair dela
+cd ../ para voltar uma ou mais pastas
+mv nomedoarquivo_caminhodesejado/ ou renomear
+
+Usar comandos do Git bash para o Git
+O que é um repositório ? Exemplos: Dropbox, google drive
+- Local: quando os arquivos estam na minha máquina
+- Remoto: arquivo na nuvem
+
+git clone - pega do remoto e trás para o local
+usar git glone dentro do git clash
+git init para cololar a pasta como projeto do github (cria um repositório local)
+git status para verificar
+git add para adicionar
+git commit -m "" (para descrever a alteração).
+git log mostra todo o registro de alterações feito no documento
+git diff para ver o que foi alterado e confirmar se deseja alterar isso mesmo
+git pull origin master (Verifica todos que foram alterados no repositório e trás para o local.
+git merge banner 
+git push origin master enviando o arquivo do local para o remoto
+cat README.md para mostrar o que tem na pasta na tela do git bass
+
+
+
+
+
