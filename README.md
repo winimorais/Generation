@@ -1,15 +1,16 @@
 # Generation
 
-    <h2>O que é Generation?</h2>
-    <p>O Programa Generation tem abrangência global e pertence ao braço social da McKinsey & Company. Esse programa visa
+ <h2>O que é Generation?</h2>
+ 
+   <p>O Programa Generation tem abrangência global e pertence ao braço social da McKinsey & Company. Esse programa visa
         formar, capacitar e
         mentorar jovens que querem iniciar uma carreira na área de Desenvolvimento Full Stack Java. Faço parte da
         primeira turma aqui no Brasil! O curso tem duração de 3 meses e as aulas ocorrem em período integral, entre
         junho e agosto de 2019, na Digital House em São Paulo.
     </p>
-    <p>Saiba mais em:</p><a href="https://www.generation.org/">https://www.generation.org/</a>
-
-    <h2>Conhecimentos e Tecnologias que aprendi durante o curso:</h2>
+     <p>Saiba mais em:</p><a href="https://www.generation.org/">https://www.generation.org/</a>
+     
+   <h2>Conhecimentos e Tecnologias que aprendi durante o curso:</h2>
     <ul>
         <li>Fundamentos de programação: variáveis, tipos de dados, códigos e sequências utilizados em programação</li>
         <li>Estrutura de dados: princípios, estrutura e hierarquia de dados e programação orientada a objetos</li>
@@ -25,6 +26,8 @@
         <li>Aprender a ensinar</li>
     </ul>
 
-    <h2>O que você encontrará nesse repositório?</h2>
+   <h2>O que você encontrará nesse repositório?</h2>
     <p>Aqui você encontrará os códigos dos exercícios que fiz durante esses 3 meses de curso, organizados por assunto e temas.
     </p>
+     
+    
