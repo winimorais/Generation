@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Receber nome e sobrenome de um formulário</title>
+</head>
+<body>
+    <form id="form1" onsubmit="getFormvalue(this)"> 
+        <!-- colocar o this para reconhecer dentro da função o formulario -->
+        First name:<br>
+        <input id ="nome" type="text" name="nome" value="">
+        <br>
+        Last name:<br>
+        <input id ="sobrenome" type="text" name="sobrenome" value="">
+        <input type="submit" value="Submit"name="enviar" value="enviar">
+        <input type="button" id="ocultar" value="Ocultar"/>
+        <input type="reset" id="reset" value="Reset"/>
+
+        <p>Por favor selecione seu genero:</p>
+  <input type="radio"  class ="genero" id="mano" name="gender" value="male"> Masculino<br>
+  <input type="radio" class ="genero" id="mina" name="gender" value="female"> Feminino<br>
+  <input type="radio" class ="genero" id="outro" name="gender" value="other"> Outros<br>
+    
+</form>
+<script src = "../Ex_2_Formulario/js/script.js"></script>
+</body>
+</html>

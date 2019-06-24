@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <title>Contato</title>
+    <link href="../Exercicio html/images/background.jpeg" rel="stylesheet">
+    <link href="../Exercicio html/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <ul>
+        <li>
+            <a href="index.html">CV</a>
+            <br>
+        </li>
+        <li>
+            <a href="hobbies.html">Hobbies</a>
+        </li>
+    </ul>
+
+    <h1>Entre em contato</h1>
+
+    <div id="Contatos">
+        <h2>Dados:</h2>
+
+        <form action="script.php" method="post">
+            <label>Nome e sobrenome</label>
+            <br>
+            <input type="text" name="nome_sobrenome" value="" placeholder="ex.João Pedro" required/>
+            <br>
+            <br>
+            <label>Telefone</label>
+            <br>
+            <input type="tel" placeholder="(00) 00000-0000" />
+            <br>
+            <br>
+            <label>E-mail</label>
+            <br>
+            <input type="email" placeholder="ex.user@email.com.br" />
+            <br>
+            <br>
+            <label>Estados</label>
+            <br>
+            <select>
+                <option value="SP">São Paulo</option>
+                <option value="MG">Minas Gerais</option>
+            </select>
+
+            <br>
+            <br>
+            <label>Gênero</label>
+            <br>
+
+            <br>
+            <input type="radio" name="genero" value="M">
+            <label>Masculino</label>
+            <input type="radio" name="genero" value="F">
+            <label>Feminino</label>
+            <input type="radio" name="OUTROS" value="P">
+            <label>Prefiro não responder</label>
+
+            <br>
+            <br>
+            <label>Passatempos</label>
+            <br>
+            <br>
+            <input type="checkbox">
+            <label>Xadrez</label>
+            <br>
+            <input type="checkbox">
+            <label>Pescaria</label>
+            <br>
+            <input type="checkbox">
+            <label>Games</label>
+
+            <!-- Comentarios -->
+            <br>
+            <br>
+            <label>Comentários</label>
+            <br>
+            <textarea name="comentarios" requires></textarea>
+
+            <!-- Botões: Enviar e Excluir -->
+            <br>
+            <button type="submit">Enviar</button>
+            <button type="submit">Excluir</button>
+            <br>
+
+        </form>
+
+    </div>
+
+
+
+</body>
+
+</html>

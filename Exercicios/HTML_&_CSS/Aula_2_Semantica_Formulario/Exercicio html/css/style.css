@@ -1,0 +1,69 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+body { 
+    background-image: url(../images/background.jpeg);
+    background-attachment: fixed;
+    font-family: 'roboto', sans-serif; 
+}
+
+h1 {
+    color:#3D71FF;
+    text-align: center;
+    background-color: rgba(0, 155, 58, 0.5);
+}
+
+h2 {
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+p {
+    text-align: justify;
+    font-size: 14px;
+    line-height: 30px;
+
+}
+
+mark {
+    background-color: aqua;
+}
+
+abbr {
+    text-decoration: none;
+}
+
+strong {
+    background-color: red
+}
+
+#Contatos {
+        position:relative;
+        width:600px;
+        height:600px;
+        background:rgb(185, 205, 218);
+        left:20px;
+        top:100px;
+        margin: 0 auto;
+        padding: 10px;
+        
+      }
+    
+      img{
+          size: 50%;
+      }
+
+      .destaque{
+          background-color: white;
+          color: black;
+          font-size: 20px
+      }
+
+      input:focus {
+          background-color: gray
+      }
+
+      a:hover {
+          color: yellow
+      }

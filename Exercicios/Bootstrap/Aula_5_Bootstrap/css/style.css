@@ -1,0 +1,65 @@
+#logo {
+   border-radius:  50%;
+   border: solid 2px black;
+   margin: 1em 1em;
+}
+
+.centro {
+       justify-content: center;
+       display: flex;
+   }
+
+   ul {
+    list-style: none;
+   }
+
+   header nav ul {
+       padding: 0;
+   }
+
+   header nav ul li div {
+    background-color: #252424;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+   }
+
+body {
+    background-image: url("../imagens/bg-body.png")
+}
+
+#banner img {
+    width: 100%;
+}
+
+.caixa img {
+  width: 100%;
+}
+
+.espaço {
+    margin-top: 20px;
+}
+
+.espaço_um {
+    margin-top: 15px;
+}
+
+footer .container {
+    background-color: red;
+    border-radius: 20px 20px 0 0;
+    height: 60px;
+    margin-top: 20px;
+    text-align: center;
+    padding: 0;
+}
+
+footer ul {
+    padding: 0;
+
+}
+
+.rodape {
+    padding-top: 20px;
+    color: white;
+    
+}
