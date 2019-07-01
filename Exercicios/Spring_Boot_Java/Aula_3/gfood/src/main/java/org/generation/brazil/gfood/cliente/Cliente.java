@@ -13,13 +13,13 @@ import javax.validation.constraints.NotNull;
 @Entity
 public class Cliente {
 
-    @Id //já diz que é uma pk
-    @GeneratedValue(strategy = GenerationType.IDENTITY)     //para gerar auto_incremento do meu id
-    private Long id;
+  @Id //já diz que é uma pk
+  @GeneratedValue(strategy = GenerationType.IDENTITY)     //para gerar auto_incremento do meu id
+  private Long id;
 
-    @NotNull
-    private String nome;
+  @NotNull
+  private String nome;
 
-    private String endereco;
+  private String endereco;
 
 }
