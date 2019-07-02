@@ -46,6 +46,11 @@ public class ClienteController {
     return repository.findById(id);
   }
 
+  @PostMapping("/clientes/nome")
+  public List<Cliente> findByNome(@RequestParam String nome) {
+    return repository.findByNome(nome);
+  }
+
   @ResponseStatus(HttpStatus.CREATED)
   @PostMapping("/clientes")
   public Cliente save(
