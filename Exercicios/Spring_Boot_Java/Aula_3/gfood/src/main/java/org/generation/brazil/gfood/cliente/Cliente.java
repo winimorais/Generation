@@ -1,13 +1,15 @@
 package org.generation.brazil.gfood.cliente;
 
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.sql.Date;
+import java.time.LocalDate;
+
+import static java.lang.String.*;
 
 @Data
 @Entity
@@ -21,5 +23,9 @@ public class Cliente {
   private String nome;
 
   private String endereco;
+
+  @Column(name="data_nascimento")
+  @NotNull
+  private LocalDate dataNascimento;
 
 }

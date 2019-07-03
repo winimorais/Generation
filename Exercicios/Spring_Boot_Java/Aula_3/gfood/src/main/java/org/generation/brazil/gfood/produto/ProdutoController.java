@@ -1,5 +1,6 @@
 package org.generation.brazil.gfood.produto;
 
+import java.math.BigDecimal;
 import java.util.Optional;
 import org.generation.brazil.gfood.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,6 +49,26 @@ public class ProdutoController {
         new ResourceNotFoundException("Não existe produto cadastrado com o id: " + id));
   }
 
+  //    Buscar uma lista de produtos com o preço < 10,00
+
+  @PostMapping("/produtos/menor")
+  public List<Produto> findByPrecoLessThan(@RequestParam BigDecimal preco) {
+    return repository.findByPrecoLessThan(preco);
+  }
+
+//    Buscar uma lista de produtos com o preço > 10,00
+
+  @PostMapping("/produtos/maior")
+  public List<Produto> findByPrecoGreaterThan(@RequestParam BigDecimal preco) {
+    return repository.findByPrecoGreaterThan(preco);
+  }
+
+//    Buscar uma lista de produtos com o preço entre 10,00 e 20,00
+
+  @PostMapping("/produtos/maiormenor")
+  public List<Produto> findByPrecoBetween(@RequestParam BigDecimal preco) {
+    return repository.findByPrecoBetween(preco);
+  }
 
 
 }

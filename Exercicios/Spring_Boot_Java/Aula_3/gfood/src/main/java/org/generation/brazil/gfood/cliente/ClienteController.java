@@ -1,8 +1,13 @@
 package org.generation.brazil.gfood.cliente;
 
+import java.sql.Date;
+import java.time.LocalDate;
 import java.util.Optional;
 import org.generation.brazil.gfood.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -81,5 +86,17 @@ public class ClienteController {
     // "DELETE FROM clioente WHERE id = ..."
     repository.deleteById(id);
   }
+
+//  - Buscar uma lista de clientes por data de Nascimento
+  @PostMapping("/clientes/data-nascimento")
+  public List<Cliente> findByDataNascimento(@RequestParam(value = "data-nascimento") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)LocalDate dataNascimento) {
+    return repository.findByDataNascimento(dataNascimento);
+  }
+
+//  Buscar uma lista de clientes por nome e data de Nascimento
+    @PostMapping("/clientes/nomeAndData")
+    public List<Cliente> findByNomeAndDataNascimento(@RequestParam String nome, LocalDate dataNascimento) {
+      return repository.findByNomeAndDataNascimento(nome, dataNascimento);
+    }
 
 }
