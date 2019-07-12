@@ -12,8 +12,11 @@ import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = ArtemisApplication.class, webEnvironment = WebEnvironment.RANDOM_PORT)
+@SpringBootTest(classes =   ArtemisApplication.class, webEnvironment = WebEnvironment.RANDOM_PORT)
 public class UsuarioControllerIntegrationTest {
 
   @Autowired
@@ -22,19 +25,26 @@ public class UsuarioControllerIntegrationTest {
   @LocalServerPort
   private int port;
 
-  private String getRootUrl() {
-    return "http://localhost:" + port;
+  private String getRootUrl(String path) {
+    return "http://localhost:" + port + "/api/v1" + path;
   }
 
   @Test
-  public void save() {
-    Usuario usuario = new Usuario();
-    usuario.setNome("João Maria");
-    usuario.setEmail("joaomaria@gmail.com");
-    usuario.setLogin("joaomaria");
-    usuario.setSenha("@Joma987");
-    ResponseEntity<Usuario> postResponse = testRestTemplate.postForEntity(getRootUrl() + "/usuarios", Usuario.class);
+  public void testaCriacaoDeUmNovoUsuario() {
 
+//    Criar novo usuario
+//    Usuario usuario = new Usuario();
+//    usuario.setNome("Winicius Morais");
+//    usuario.setEmail("winimorais@gmail.com");
+//    usuario.setLogin("winimorais");
+//    usuario.setSenha("@123ww");
+
+//    Chamada da API
+    ResponseEntity<Usuario> postResponse = testRestTemplate.postForEntity(getRootUrl("/usuarios"), usuario, Usuario.class);
+
+      assertNotNull(postResponse);
+
+      assertEquals(201, postResponse.getStatusCodeValue());
   }
 
 }
