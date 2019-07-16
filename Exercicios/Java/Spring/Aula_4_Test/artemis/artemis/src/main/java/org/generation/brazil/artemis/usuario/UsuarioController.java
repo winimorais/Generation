@@ -1,5 +1,9 @@
 package org.generation.brazil.artemis.usuario;
 
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 import java.util.List;
 import java.util.Optional;
 import org.generation.brazil.artemis.exception.ResourceNotFoundException;
@@ -26,6 +30,15 @@ public class UsuarioController {
   @Autowired
   private UsuarioRepository usuarioRepository;
 
+  @ApiOperation(value = "Insere um novo usuário",
+      notes = "Insere um novo usuário",
+      response = Usuario.class)
+  @ApiResponses(value = {
+      @ApiResponse(code = 201, message = "Inserido"),
+      @ApiResponse(code = 401, message = "Sem autorização"),
+      @ApiResponse(code = 403, message = "Proíbido"),
+      @ApiResponse(code = 404, message = "Não encontrado")
+  })
   @ResponseStatus(HttpStatus.CREATED)
   @PostMapping("/usuarios")
   public Usuario save(@RequestBody Usuario usuario) {
@@ -33,6 +46,15 @@ public class UsuarioController {
     return usuarioRepository.save(usuario);
   }
 
+  @ApiOperation(value = "Lista todos os usuários",
+      notes = "Lista todos os usuários",
+      response = List.class)
+  @ApiResponses(value = {
+      @ApiResponse(code = 200, message = "Sucesso"),
+      @ApiResponse(code = 401, message = "Sem autorização"),
+      @ApiResponse(code = 403, message = "Proíbido"),
+      @ApiResponse(code = 404, message = "Não encontrado")
+  })
   @GetMapping("/usuarios")
   public List<Usuario> findAll() {
     logger.error("ERROR");
@@ -48,7 +70,10 @@ public class UsuarioController {
   }
 
   @PutMapping("/usuarios/{id}")
-  public Usuario update(@PathVariable Long id, @RequestBody Usuario usuario)
+  public Usuario update(
+      @ApiParam(required = true, name = "id", value="Id necessário para atualizar o usuário")
+      @PathVariable Long id,
+      @RequestBody Usuario usuario)
       throws ResourceNotFoundException {
     // "UPDATE produto SET ... WHERE ..."
     return usuarioRepository.findById(id).map(usuarioAtualizado -> {
